@@ -5,6 +5,9 @@ stdenv.mkDerivation rec {
   version = "git";
   src = ./.;
   nativeBuildInputs = [ cmake ];
+  postUnpack = ''
+    rm $sourceRoot/BUILD
+  '';
   dontBuild = true;
   meta = with lib; {
     homepage    = "https://github.com/arximboldi/immer";
