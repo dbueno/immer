@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
   src = fetchGit ./.;
   nativeBuildInputs = [ cmake ];
   dontBuild = true;
-  meta = with stdenv.lib; {
+  meta = with lib; {
     homepage    = "https://github.com/arximboldi/immer";
     description = "Postmodern immutable data structures for C++";
     license     = licenses.boost;
