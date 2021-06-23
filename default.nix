@@ -3,7 +3,7 @@ with import <nixpkgs> {};
 stdenv.mkDerivation rec {
   name = "immer-git";
   version = "git";
-  src = fetchGit ./.;
+  src = ./.;
   nativeBuildInputs = [ cmake ];
   dontBuild = true;
   meta = with lib; {
